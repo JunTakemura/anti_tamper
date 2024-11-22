@@ -9,12 +9,24 @@ fi
 PROJECT_FILE="$1"
 
 # Set this to your storage directory
-STORAGE_DIR="/home/kali/"
+STORAGE_DIR="/home/kali/forensify"
 
-# Make the storage directory if it doesn't exist
+# Set log file name based on project file name
+LOG_FILE="$STORAGE_DIR/$(basename "$PROJECT_FILE").log"
+
+# Make storage directory if it doesn't exist
 if [ ! -d "$STORAGE_DIR" ]; then
     echo "Creating storage directory: $STORAGE_DIR"
     mkdir -p "$STORAGE_DIR"
+fi
+
+
+# Initialize log file if it doesn't exist
+if [ ! -f "$LOG_FILE" ]; then
+    echo "Initializing log file: $LOG_FILE"
+    touch "$LOG_FILE"
+    echo "Forensic Log - Initialized on $(date)" >> "$LOG_FILE"
+    echo "===================================" >> "$LOG_FILE"
 fi
 
 # Sync system time with NTP
