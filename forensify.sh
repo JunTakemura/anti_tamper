@@ -58,7 +58,7 @@ sudo chattr -i "$STORAGE_DIR"
 log_message "Changed immutability of '$STORAGE_DIR' to -i."
 
 # Move the files to the directory
-echo "Storing the Dradis project and hash..."
+echo "Storing the project and hash..."
 mv "$PROJECT_FILE" "$HASH_FILE" "$STORAGE_DIR"
 log_message "Moved files '$PROJECT_FILE' and '$HASH_FILE' to '$STORAGE_DIR'."
 
