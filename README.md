@@ -113,7 +113,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Prerequisites
 
-**NTP Client**:
+**Chrony**:
 ```bash
 sudo apt install chrony
 ```
