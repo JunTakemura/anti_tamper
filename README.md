@@ -115,7 +115,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 **NTP Client**:
 ```bash
-sudo apt install ntp
+sudo apt install chrony
 ```
 **OpenTimestamp Client**:
 ```bash
