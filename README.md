@@ -119,7 +119,7 @@ sudo apt install ntp
 ```
 **OpenTimestamp Client**:
 ```bash
-sudo apt install opentimestamps-client
+pip3 install opentimestamps-client
 ```
 
 ### Installation
