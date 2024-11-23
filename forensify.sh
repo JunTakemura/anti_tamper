@@ -37,9 +37,12 @@ if [ ! -f "$LOG_FILE" ]; then
 fi
 
 # Sync system time with Chrony
-echo "Syncing system time..."
-sudo systemctl restart chronyd
-sudo chronyc -a makestep
+if ! systemctl is-active --quiet chronyd; then
+    echo "Starting and syncing Chrony..."
+    sudo systemctl restart chronyd
+    sudo chronyc -a makestep
+    log_message "Chrony restarted and system time synchronized."
+fi
 
 # Hash the file
 HASH_FILE="${PROJECT_FILE}.sha256"
