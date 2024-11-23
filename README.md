@@ -133,8 +133,9 @@ Download the .sh file or clone the repository. Make the file executable. You sho
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+```bash
 sudo ./forensify.sh <file>
-
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
