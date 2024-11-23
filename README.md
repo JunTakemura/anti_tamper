@@ -79,6 +79,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+I made this for making Dradis project files forensic-proof, but it works with any file. It hashes the file, appends the timestamp, and store them in an immutable directory.
+
+However, this is not a strictly forensic-grade procedure and **should not be used for device forensics**. Even for Dradis files, desirably you should use WORM devices instead of ///chattr +i///.
+
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -109,11 +113,18 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Prerequisites
 
-
+**NTP Client**:
+```bash
+sudo apt install ntp
+```
+**OpenTimestamp Client**:
+```bash
+sudo apt install opentimestamps-client
+```
 
 ### Installation
 
-
+Download the .sh file or clone the repository. Make the file executable. You should configure the storage directory in the code. By default, it's set to /home/kali/forensify/.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,6 +133,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+sudo ./forensify.sh <file>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
