@@ -122,7 +122,7 @@ pip3 install opentimestamps-client
 
 ### Installation
 
-Download the .sh file or clone the repository. Make the file executable. You should configure the storage directory in the code. By default, it's set to /home/kali/forensify/.
+Download the .sh file or clone the repository. Make the file executable. You should configure the storage directory in the code. By default, it's set to /home/kali/anti_tamper/.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -132,7 +132,7 @@ Download the .sh file or clone the repository. Make the file executable. You sho
 ## Usage
 
 ```bash
-sudo ./forensify.sh <file>
+sudo ./anti_tamper.sh <file>
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
