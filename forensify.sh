@@ -9,7 +9,7 @@ fi
 PROJECT_FILE="$1"
 
 # Set this to your storage directory
-STORAGE_DIR="/home/kali/forensify"
+STORAGE_DIR="/home/kali/anti_tamper"
 
 # Set log file name based on project file name
 LOG_FILE="$STORAGE_DIR/$(basename "$PROJECT_FILE").log"
@@ -31,7 +31,7 @@ fi
 if [ ! -f "$LOG_FILE" ]; then
     echo "Initializing log file: $LOG_FILE"
     touch "$LOG_FILE"
-    echo "Forensic Log - Initialized on $(date)" >> "$LOG_FILE"
+    echo "Log - Initialized on $(date)" >> "$LOG_FILE"
     echo "===================================" >> "$LOG_FILE"
     log_message "Initialized log file."
 fi
