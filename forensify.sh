@@ -36,9 +36,10 @@ if [ ! -f "$LOG_FILE" ]; then
     log_message "Initialized log file."
 fi
 
-# Sync system time with NTP
-echo "Syncing system time with NTP..."
-sudo ntpdate -u pool.ntp.org
+# Sync system time with Chrony
+echo "Syncing system time..."
+sudo systemctl restart chronyd
+sudo chronyc -a makestep
 
 # Hash the file
 HASH_FILE="${PROJECT_FILE}.sha256"
