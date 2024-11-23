@@ -117,7 +117,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ```bash
 sudo apt install chrony
 ```
-**OpenTimestamp Client**:
+[**OpenTimestamp Client**](https://github.com/opentimestamps/opentimestamps-client):
 ```bash
 pip3 install opentimestamps-client
 ```
