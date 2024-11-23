@@ -79,9 +79,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I made this for making Dradis project files forensic-proof, but it works with any file. It hashes the file, appends the timestamp, and store them in an immutable directory.
+I originally made this for making Dradis project files forensic-proof, but it works with any file. It hashes the file, appends the timestamp, and store them in an immutable directory.
 
-However, this is not a strictly forensic-grade procedure and **should not be used for device forensics**. Even for Dradis files, desirably you should use WORM devices instead of `chattr +i`.
+However, this doesn't follow a strict forensic-grade procedure and **should never be used for device forensics**. Even for Dradis files, you should use WORM devices instead of `chattr +i` if possible.
 
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
