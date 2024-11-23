@@ -20,10 +20,10 @@
 
 -->
 
-<h3 align="center">Easy Forensifier</h3>
+<h3 align="center">Anti Tamper</h3>
 
   <p align="center">
-    Make a file forensically sound using hashes and timestamps on Linux. Note that this prioritizes convenience over forensic integrity and may not meet strict requirements depending on your use case. Be sure to check your requirements if the matter is critical.
+    Make a file tamper-evident using hashes and timestamps on Linux. Note that this prioritizes convenience over forensic integrity and may not meet strict requirements depending on your use case. Be sure to check your requirements if the matter is critical.
     <br />
     <!--
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
@@ -79,9 +79,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I originally made this for making Dradis project files forensic-proof, but it works with any file. It hashes the file, appends the timestamp, and store them in an immutable directory.
-
-However, this doesn't follow a strict forensic-grade procedure and **should never be used for device forensics**. Even for Dradis files, you should use WORM devices instead of `chattr +i` if possible.
+This tool hashes the file, appends the timestamp, and store them in an immutable directory. However, this doesn't follow a strict forensic-grade procedure and **should never be used for device forensics**.
 
 <!--
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
