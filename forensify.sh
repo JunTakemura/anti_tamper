@@ -48,10 +48,15 @@ sha256sum "$PROJECT_FILE" > "$HASH_FILE"
 log_message "Computed hash for file '$PROJECT_FILE': $(cat "$HASH_FILE")."
 
 # Timestamp
-echo "Timestamping the project and its hash..."
-ots stamp "$PROJECT_FILE"
-ots stamp "$HASH_FILE"
-log_message "Timestamped files '$PROJECT_FILE' and '$HASH_FILE'."
+if command -v ots &> /dev/null; then
+    echo "Timestamping the project and its hash..."
+    ots stamp "$PROJECT_FILE"
+    ots stamp "$HASH_FILE"
+    log_message "Timestamped files '$PROJECT_FILE' and '$HASH_FILE'."
+else
+    echo "ERROR: OpenTimestamps client is not installed. Skipping timestamping."
+    log_message "ERROR: OpenTimestamps client not found. Timestamping skipped."
+fi
 
 # Temporarily make the directory mutable
 echo "Making directory mutable: $STORAGE_DIR"
